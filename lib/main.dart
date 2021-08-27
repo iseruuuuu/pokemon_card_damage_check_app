@@ -35,43 +35,55 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-
-            const  Spacer(),
-
+            const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
                   onPressed: () {},
-                  child: Text('リセット'),
+                  child: const Text('リセット'),
                 ),
               ],
             ),
-
-            const  Spacer(),
+            const Spacer(),
             Row(
               children: [
+                const Spacer(),
                 SizedBox(
                   height: mediaWidth / 1.5,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
-                        width: mediaWidth / 10,
-                        height: mediaWidth / 10,
+                        width: mediaWidth / 8,
+                        height: mediaWidth / 8,
                         color: Colors.orange,
-                        child: const Center(child: Text('やけど')),
+                        child: const Center(
+                          child: Text(
+                            'やけど',
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
                       ),
                       Container(
-                        width: mediaWidth / 10,
-                        height: mediaWidth / 10,
+                        width: mediaWidth / 8,
+                        height: mediaWidth / 8,
                         color: Colors.deepPurple,
-                        child: const Center(child: Text('どく')),
+                        child: const Center(
+                          child: Text(
+                            'どく',
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   ),
                 ),
-                const  Spacer(),
+                const Spacer(),
 
                 //TODO 大カード
                 Container(
@@ -80,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.red,
                 ),
 
-                const  Spacer(),
+                const Spacer(),
 
                 SizedBox(
                   height: mediaWidth / 1.5,
@@ -88,57 +100,80 @@ class _MyHomePageState extends State<MyHomePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
-                        width: mediaWidth / 10,
-                        height: mediaWidth / 10,
+                        width: mediaWidth / 8,
+                        height: mediaWidth / 8,
                         color: Colors.red,
-                        child: const Center(child: Text('10')),
+                        child: const Center(
+                          child: Text(
+                            '10',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
                       ),
                       Container(
-                        width: mediaWidth / 10,
-                        height: mediaWidth / 10,
+                        width: mediaWidth / 8,
+                        height: mediaWidth / 8,
                         color: Colors.red,
-                        child: const Center(child: Text('50')),
+                        child: const Center(
+                          child: Text(
+                            '50',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
                       ),
                       Container(
-                        width: mediaWidth / 10,
-                        height: mediaWidth / 10,
+                        width: mediaWidth / 8,
+                        height: mediaWidth / 8,
                         color: Colors.red,
-                        child: const Center(child: Text('100')),
-
+                        child: const Center(
+                          child: Text(
+                            '100',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   ),
                 ),
+                const Spacer(),
               ],
             ),
-
-            const  Spacer(),
+            const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
                   width: mediaWidth / 5.5,
-                  height: mediaWidth /2.5,
+                  height: mediaWidth / 2.5,
                   color: Colors.red,
                 ),
                 Container(
                   width: mediaWidth / 5.5,
-                  height: mediaWidth /2.5,
+                  height: mediaWidth / 2.5,
                   color: Colors.blue,
                 ),
                 Container(
                   width: mediaWidth / 5.5,
-                  height: mediaWidth /2.5,
+                  height: mediaWidth / 2.5,
                   color: Colors.yellow,
                 ),
                 Container(
                   width: mediaWidth / 5.5,
-                  height: mediaWidth /2.5,
+                  height: mediaWidth / 2.5,
                   color: Colors.green,
                 ),
                 Container(
                   width: mediaWidth / 5.5,
-                  height: mediaWidth /2.5,
+                  height: mediaWidth / 2.5,
                   color: Colors.pink,
                 ),
               ],
