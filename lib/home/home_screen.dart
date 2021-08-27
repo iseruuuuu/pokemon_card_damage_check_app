@@ -14,6 +14,12 @@ class HomeScreen extends StatelessWidget {
       ),
       builder: (context, _) {
         final mediaWidth = MediaQuery.of(context).size.width;
+        final pokemon = context.select<HomeScreenState, int>((state) => state.pokemon);
+        final pokemon1 = context.select<HomeScreenState, int>((state) => state.pokemon1);
+        final pokemon2 = context.select<HomeScreenState, int>((state) => state.pokemon2);
+        final pokemon3 = context.select<HomeScreenState, int>((state) => state.pokemon3);
+        final pokemon4 = context.select<HomeScreenState, int>((state) => state.pokemon4);
+        final pokemon5 = context.select<HomeScreenState, int>((state) => state.pokemon5);
         return Scaffold(
           body: Center(
             child: Column(
@@ -76,6 +82,7 @@ class HomeScreen extends StatelessWidget {
                         width: mediaWidth / 2,
                         height: mediaWidth / 1.5,
                         color: Colors.red,
+                        child: Text('$pokemon'),
                       ),
                     ),
                     const Spacer(),
@@ -155,6 +162,7 @@ class HomeScreen extends StatelessWidget {
                         width: mediaWidth / 5.5,
                         height: mediaWidth / 2.5,
                         color: Colors.red,
+                        child: Text('$pokemon1'),
                       ),
                     ),
                     GestureDetector(
@@ -164,6 +172,7 @@ class HomeScreen extends StatelessWidget {
                         width: mediaWidth / 5.5,
                         height: mediaWidth / 2.5,
                         color: Colors.blue,
+                        child: Text('$pokemon2'),
                       ),
                     ),
                     GestureDetector(
@@ -173,6 +182,7 @@ class HomeScreen extends StatelessWidget {
                         width: mediaWidth / 5.5,
                         height: mediaWidth / 2.5,
                         color: Colors.yellow,
+                        child: Text('$pokemon3'),
                       ),
                     ),
                     GestureDetector(
@@ -182,6 +192,7 @@ class HomeScreen extends StatelessWidget {
                         width: mediaWidth / 5.5,
                         height: mediaWidth / 2.5,
                         color: Colors.green,
+                        child: Text('$pokemon4'),
                       ),
                     ),
                     GestureDetector(
@@ -191,6 +202,7 @@ class HomeScreen extends StatelessWidget {
                         width: mediaWidth / 5.5,
                         height: mediaWidth / 2.5,
                         color: Colors.pink,
+                        child: Text('$pokemon5'),
                       ),
                     ),
                   ],

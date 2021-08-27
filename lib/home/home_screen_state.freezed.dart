@@ -18,12 +18,12 @@ class _$HomeScreenStateTearOff {
   const _$HomeScreenStateTearOff();
 
   _HomeScreenState call(
-      {String pokemon = '',
-      String pokemon1 = '',
-      String pokemon2 = '',
-      String pokemon3 = '',
-      String pokemon4 = '',
-      String pokemon5 = ''}) {
+      {int pokemon = 0,
+      int pokemon1 = 0,
+      int pokemon2 = 0,
+      int pokemon3 = 0,
+      int pokemon4 = 0,
+      int pokemon5 = 0}) {
     return _HomeScreenState(
       pokemon: pokemon,
       pokemon1: pokemon1,
@@ -40,12 +40,12 @@ const $HomeScreenState = _$HomeScreenStateTearOff();
 
 /// @nodoc
 mixin _$HomeScreenState {
-  String get pokemon => throw _privateConstructorUsedError;
-  String get pokemon1 => throw _privateConstructorUsedError;
-  String get pokemon2 => throw _privateConstructorUsedError;
-  String get pokemon3 => throw _privateConstructorUsedError;
-  String get pokemon4 => throw _privateConstructorUsedError;
-  String get pokemon5 => throw _privateConstructorUsedError;
+  int get pokemon => throw _privateConstructorUsedError;
+  int get pokemon1 => throw _privateConstructorUsedError;
+  int get pokemon2 => throw _privateConstructorUsedError;
+  int get pokemon3 => throw _privateConstructorUsedError;
+  int get pokemon4 => throw _privateConstructorUsedError;
+  int get pokemon5 => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeScreenStateCopyWith<HomeScreenState> get copyWith =>
@@ -58,12 +58,12 @@ abstract class $HomeScreenStateCopyWith<$Res> {
           HomeScreenState value, $Res Function(HomeScreenState) then) =
       _$HomeScreenStateCopyWithImpl<$Res>;
   $Res call(
-      {String pokemon,
-      String pokemon1,
-      String pokemon2,
-      String pokemon3,
-      String pokemon4,
-      String pokemon5});
+      {int pokemon,
+      int pokemon1,
+      int pokemon2,
+      int pokemon3,
+      int pokemon4,
+      int pokemon5});
 }
 
 /// @nodoc
@@ -88,27 +88,27 @@ class _$HomeScreenStateCopyWithImpl<$Res>
       pokemon: pokemon == freezed
           ? _value.pokemon
           : pokemon // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       pokemon1: pokemon1 == freezed
           ? _value.pokemon1
           : pokemon1 // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       pokemon2: pokemon2 == freezed
           ? _value.pokemon2
           : pokemon2 // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       pokemon3: pokemon3 == freezed
           ? _value.pokemon3
           : pokemon3 // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       pokemon4: pokemon4 == freezed
           ? _value.pokemon4
           : pokemon4 // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       pokemon5: pokemon5 == freezed
           ? _value.pokemon5
           : pokemon5 // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
     ));
   }
 }
@@ -121,12 +121,12 @@ abstract class _$HomeScreenStateCopyWith<$Res>
       __$HomeScreenStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String pokemon,
-      String pokemon1,
-      String pokemon2,
-      String pokemon3,
-      String pokemon4,
-      String pokemon5});
+      {int pokemon,
+      int pokemon1,
+      int pokemon2,
+      int pokemon3,
+      int pokemon4,
+      int pokemon5});
 }
 
 /// @nodoc
@@ -153,27 +153,27 @@ class __$HomeScreenStateCopyWithImpl<$Res>
       pokemon: pokemon == freezed
           ? _value.pokemon
           : pokemon // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       pokemon1: pokemon1 == freezed
           ? _value.pokemon1
           : pokemon1 // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       pokemon2: pokemon2 == freezed
           ? _value.pokemon2
           : pokemon2 // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       pokemon3: pokemon3 == freezed
           ? _value.pokemon3
           : pokemon3 // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       pokemon4: pokemon4 == freezed
           ? _value.pokemon4
           : pokemon4 // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       pokemon5: pokemon5 == freezed
           ? _value.pokemon5
           : pokemon5 // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
     ));
   }
 }
@@ -182,31 +182,31 @@ class __$HomeScreenStateCopyWithImpl<$Res>
 
 class _$_HomeScreenState implements _HomeScreenState {
   const _$_HomeScreenState(
-      {this.pokemon = '',
-      this.pokemon1 = '',
-      this.pokemon2 = '',
-      this.pokemon3 = '',
-      this.pokemon4 = '',
-      this.pokemon5 = ''});
+      {this.pokemon = 0,
+      this.pokemon1 = 0,
+      this.pokemon2 = 0,
+      this.pokemon3 = 0,
+      this.pokemon4 = 0,
+      this.pokemon5 = 0});
 
-  @JsonKey(defaultValue: '')
+  @JsonKey(defaultValue: 0)
   @override
-  final String pokemon;
-  @JsonKey(defaultValue: '')
+  final int pokemon;
+  @JsonKey(defaultValue: 0)
   @override
-  final String pokemon1;
-  @JsonKey(defaultValue: '')
+  final int pokemon1;
+  @JsonKey(defaultValue: 0)
   @override
-  final String pokemon2;
-  @JsonKey(defaultValue: '')
+  final int pokemon2;
+  @JsonKey(defaultValue: 0)
   @override
-  final String pokemon3;
-  @JsonKey(defaultValue: '')
+  final int pokemon3;
+  @JsonKey(defaultValue: 0)
   @override
-  final String pokemon4;
-  @JsonKey(defaultValue: '')
+  final int pokemon4;
+  @JsonKey(defaultValue: 0)
   @override
-  final String pokemon5;
+  final int pokemon5;
 
   @override
   String toString() {
@@ -255,25 +255,25 @@ class _$_HomeScreenState implements _HomeScreenState {
 
 abstract class _HomeScreenState implements HomeScreenState {
   const factory _HomeScreenState(
-      {String pokemon,
-      String pokemon1,
-      String pokemon2,
-      String pokemon3,
-      String pokemon4,
-      String pokemon5}) = _$_HomeScreenState;
+      {int pokemon,
+      int pokemon1,
+      int pokemon2,
+      int pokemon3,
+      int pokemon4,
+      int pokemon5}) = _$_HomeScreenState;
 
   @override
-  String get pokemon => throw _privateConstructorUsedError;
+  int get pokemon => throw _privateConstructorUsedError;
   @override
-  String get pokemon1 => throw _privateConstructorUsedError;
+  int get pokemon1 => throw _privateConstructorUsedError;
   @override
-  String get pokemon2 => throw _privateConstructorUsedError;
+  int get pokemon2 => throw _privateConstructorUsedError;
   @override
-  String get pokemon3 => throw _privateConstructorUsedError;
+  int get pokemon3 => throw _privateConstructorUsedError;
   @override
-  String get pokemon4 => throw _privateConstructorUsedError;
+  int get pokemon4 => throw _privateConstructorUsedError;
   @override
-  String get pokemon5 => throw _privateConstructorUsedError;
+  int get pokemon5 => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$HomeScreenStateCopyWith<_HomeScreenState> get copyWith =>
