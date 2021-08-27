@@ -84,16 +84,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 const Spacer(),
-
                 //TODO 大カード
                 Container(
                   width: mediaWidth / 2,
                   height: mediaWidth / 1.5,
                   color: Colors.red,
                 ),
-
                 const Spacer(),
-
                 SizedBox(
                   height: mediaWidth / 1.5,
                   child: Column(
