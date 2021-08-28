@@ -112,7 +112,11 @@ class HomeScreen extends StatelessWidget {
                             child: Container(
                               width: mediaWidth / 8,
                               height: mediaWidth / 8,
-                              color: Colors.red,
+                              decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.red),
+                                  borderRadius: BorderRadius.circular(30),
+                                  color: Colors.red
+                              ),
                               child: const Center(
                                 child: Text(
                                   '10',
@@ -130,7 +134,11 @@ class HomeScreen extends StatelessWidget {
                             child: Container(
                               width: mediaWidth / 8,
                               height: mediaWidth / 8,
-                              color: Colors.red,
+                              decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.red),
+                                  borderRadius: BorderRadius.circular(30),
+                                  color: Colors.red
+                              ),
                               child: const Center(
                                 child: Text(
                                   '50',
@@ -148,7 +156,11 @@ class HomeScreen extends StatelessWidget {
                             child: Container(
                               width: mediaWidth / 8,
                               height: mediaWidth / 8,
-                              color: Colors.red,
+                              decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.red),
+                                  borderRadius: BorderRadius.circular(30),
+                                  color: Colors.red
+                              ),
                               child: const Center(
                                 child: Text(
                                   '100',
