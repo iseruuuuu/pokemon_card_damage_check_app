@@ -46,6 +46,8 @@ class HomeScreenController extends StateNotifier<HomeScreenState>
   int damage4 = 0;
   int damage5 = 0;
 
+  int count = 0;
+
   @override
   void initState() {
     super.initState();
@@ -123,37 +125,34 @@ class HomeScreenController extends StateNotifier<HomeScreenState>
     // Expression exp = p.parse(amount3);
     // _exp3 = exp.evaluate(EvaluationType.REAL, cm).toString();
 
-    int p = damage + 10;
-    print(p);
-
     if(isPokemon) {
       state = state.copyWith(
-        pokemon: p,
+       pokemon: damage = damage + 10,
       );
     }
     if(isPokemon1) {
       state = state.copyWith(
-        pokemon1: damage1 + 10,
+        pokemon1: damage1 = damage1 + 10,
       );
     }
     if(isPokemon2) {
       state = state.copyWith(
-        pokemon2: damage2 + 10 ,
+        pokemon2: damage2 = damage2 + 10,
       );
     }
     if(isPokemon3) {
       state = state.copyWith(
-        pokemon3: damage3 + 10
+          pokemon3: damage3 = damage3 + 10,
       );
     }
     if(isPokemon4) {
       state = state.copyWith(
-        pokemon4: damage4 + 10,
+        pokemon4: damage4 = damage4 + 10,
       );
     }
     if(isPokemon5) {
       state = state.copyWith(
-        pokemon5: damage5 + 10,
+        pokemon5: damage5 = damage5 + 10,
       );
     }
 
@@ -162,32 +161,32 @@ class HomeScreenController extends StateNotifier<HomeScreenState>
   void damage50() {
     if(isPokemon) {
       state = state.copyWith(
-        pokemon: damage + 50,
+        pokemon: damage = damage + 50,
       );
     }
     if(isPokemon1) {
       state = state.copyWith(
-        pokemon1: damage1 + 50,
+        pokemon1: damage1 = damage1 + 50,
       );
     }
     if(isPokemon2) {
       state = state.copyWith(
-        pokemon2: damage2 + 50 ,
+        pokemon2: damage2 = damage2 + 50,
       );
     }
     if(isPokemon3) {
       state = state.copyWith(
-          pokemon3: damage3 + 50
+          pokemon3: damage3 = damage3 + 50,
       );
     }
     if(isPokemon4) {
       state = state.copyWith(
-        pokemon4: damage4 + 50,
+        pokemon4: damage4 = damage4 + 50,
       );
     }
     if(isPokemon5) {
       state = state.copyWith(
-        pokemon5: damage5 + 50,
+        pokemon5: damage5 = damage5 + 50,
       );
     }
   }
@@ -195,34 +194,46 @@ class HomeScreenController extends StateNotifier<HomeScreenState>
   void damage100() {
     if(isPokemon) {
       state = state.copyWith(
-        pokemon: damage + 100,
+        pokemon: damage = damage + 100,
       );
     }
     if(isPokemon1) {
       state = state.copyWith(
-        pokemon1: damage1 + 100,
+        pokemon1: damage1 = damage1 + 100,
       );
     }
     if(isPokemon2) {
       state = state.copyWith(
-        pokemon2: damage2 + 100 ,
+        pokemon2: damage2 = damage2 + 100,
       );
     }
     if(isPokemon3) {
       state = state.copyWith(
-          pokemon3: damage3 + 100
+        pokemon3: damage3 = damage3 + 100,
       );
     }
     if(isPokemon4) {
       state = state.copyWith(
-        pokemon4: damage4 + 100,
+        pokemon4: damage4 = damage4 + 100,
       );
     }
     if(isPokemon5) {
       state = state.copyWith(
-        pokemon5: damage5 + 100,
+        pokemon5: damage5 = damage5 + 100,
       );
     }
+  }
+
+
+  void reset() {
+    state = state.copyWith(
+      pokemon: 0,
+      pokemon1: 0,
+      pokemon2: 0,
+      pokemon3: 0,
+      pokemon4: 0,
+      pokemon5: 0,
+    );
   }
 
 }

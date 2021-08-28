@@ -38,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () => context.read<HomeScreenController>().reset(),
                       child: const Text('リセット'),
                     ),
                   ],
@@ -152,7 +152,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                           GestureDetector(
                             onTap: () =>
-                                context.read<HomeScreenController>().damage10(),
+                                context.read<HomeScreenController>().damage100(),
                             child: Container(
                               width: mediaWidth / 8,
                               height: mediaWidth / 8,
