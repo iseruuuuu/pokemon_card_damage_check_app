@@ -2,13 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:state_notifier/state_notifier.dart';
-import 'package:math_expressions/math_expressions.dart';
 
 part 'home_screen_state.freezed.dart';
 
 @freezed
 abstract class HomeScreenState with _$HomeScreenState {
   const factory HomeScreenState({
+
+    @Default('バトル中のポケモン') String title,
+
     @Default(0) int pokemon,
 
     @Default(0) int pokemon1,
@@ -66,7 +68,9 @@ class HomeScreenController extends StateNotifier<HomeScreenState>
     isPokemon4 = false;
     isPokemon5 = false;
 
-    print(isPokemon);
+    state = state.copyWith(
+      title: 'バトル中のポケモン',
+    );
   }
 
   void pokemon1() {
@@ -76,7 +80,9 @@ class HomeScreenController extends StateNotifier<HomeScreenState>
     isPokemon3 = false;
     isPokemon4 = false;
     isPokemon5 = false;
-    print(isPokemon1);
+    state = state.copyWith(
+      title: 'ベンチのポケモン①',
+    );
   }
 
   void pokemon2() {
@@ -86,7 +92,9 @@ class HomeScreenController extends StateNotifier<HomeScreenState>
     isPokemon3 = false;
     isPokemon4 = false;
     isPokemon5 = false;
-    print(isPokemon2);
+    state = state.copyWith(
+      title: 'ベンチのポケモン②',
+    );
   }
 
   void pokemon3() {
@@ -96,7 +104,9 @@ class HomeScreenController extends StateNotifier<HomeScreenState>
     isPokemon3 = true;
     isPokemon4 = false;
     isPokemon5 = false;
-    print(isPokemon3);
+    state = state.copyWith(
+      title: 'ベンチのポケモン③',
+    );
   }
   void pokemon4() {
     isPokemon = false;
@@ -105,7 +115,9 @@ class HomeScreenController extends StateNotifier<HomeScreenState>
     isPokemon3 = false;
     isPokemon4 = true;
     isPokemon5 = false;
-    print(isPokemon4);
+    state = state.copyWith(
+      title: 'ベンチのポケモン④',
+    );
   }
 
   void pokemon5() {
@@ -115,7 +127,9 @@ class HomeScreenController extends StateNotifier<HomeScreenState>
     isPokemon3 = false;
     isPokemon4 = false;
     isPokemon5 = true;
-    print(isPokemon5);
+    state = state.copyWith(
+      title: 'ベンチのポケモン⑤',
+    );
   }
 
   void damage10() {
@@ -127,7 +141,7 @@ class HomeScreenController extends StateNotifier<HomeScreenState>
 
     if(isPokemon) {
       state = state.copyWith(
-       pokemon: damage = damage + 10,
+        pokemon: damage = damage + 10,
       );
     }
     if(isPokemon1) {
@@ -142,7 +156,7 @@ class HomeScreenController extends StateNotifier<HomeScreenState>
     }
     if(isPokemon3) {
       state = state.copyWith(
-          pokemon3: damage3 = damage3 + 10,
+        pokemon3: damage3 = damage3 + 10,
       );
     }
     if(isPokemon4) {
@@ -176,7 +190,7 @@ class HomeScreenController extends StateNotifier<HomeScreenState>
     }
     if(isPokemon3) {
       state = state.copyWith(
-          pokemon3: damage3 = damage3 + 50,
+        pokemon3: damage3 = damage3 + 50,
       );
     }
     if(isPokemon4) {

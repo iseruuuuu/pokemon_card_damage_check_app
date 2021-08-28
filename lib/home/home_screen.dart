@@ -28,7 +28,11 @@ class HomeScreen extends StatelessWidget {
         context.select<HomeScreenState, int>((state) => state.pokemon4);
         final pokemon5 =
         context.select<HomeScreenState, int>((state) => state.pokemon5);
+        final text = context.select<HomeScreenState, String>((state) => state.title);
         return Scaffold(
+          appBar: AppBar(
+            title: Text('現在のダメージ対象：' + text),
+          ),
           body: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

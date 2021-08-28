@@ -18,13 +18,15 @@ class _$HomeScreenStateTearOff {
   const _$HomeScreenStateTearOff();
 
   _HomeScreenState call(
-      {int pokemon = 0,
+      {String title = 'バトル中のポケモン',
+      int pokemon = 0,
       int pokemon1 = 0,
       int pokemon2 = 0,
       int pokemon3 = 0,
       int pokemon4 = 0,
       int pokemon5 = 0}) {
     return _HomeScreenState(
+      title: title,
       pokemon: pokemon,
       pokemon1: pokemon1,
       pokemon2: pokemon2,
@@ -40,6 +42,7 @@ const $HomeScreenState = _$HomeScreenStateTearOff();
 
 /// @nodoc
 mixin _$HomeScreenState {
+  String get title => throw _privateConstructorUsedError;
   int get pokemon => throw _privateConstructorUsedError;
   int get pokemon1 => throw _privateConstructorUsedError;
   int get pokemon2 => throw _privateConstructorUsedError;
@@ -58,7 +61,8 @@ abstract class $HomeScreenStateCopyWith<$Res> {
           HomeScreenState value, $Res Function(HomeScreenState) then) =
       _$HomeScreenStateCopyWithImpl<$Res>;
   $Res call(
-      {int pokemon,
+      {String title,
+      int pokemon,
       int pokemon1,
       int pokemon2,
       int pokemon3,
@@ -77,6 +81,7 @@ class _$HomeScreenStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? title = freezed,
     Object? pokemon = freezed,
     Object? pokemon1 = freezed,
     Object? pokemon2 = freezed,
@@ -85,6 +90,10 @@ class _$HomeScreenStateCopyWithImpl<$Res>
     Object? pokemon5 = freezed,
   }) {
     return _then(_value.copyWith(
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
       pokemon: pokemon == freezed
           ? _value.pokemon
           : pokemon // ignore: cast_nullable_to_non_nullable
@@ -121,7 +130,8 @@ abstract class _$HomeScreenStateCopyWith<$Res>
       __$HomeScreenStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int pokemon,
+      {String title,
+      int pokemon,
       int pokemon1,
       int pokemon2,
       int pokemon3,
@@ -142,6 +152,7 @@ class __$HomeScreenStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? title = freezed,
     Object? pokemon = freezed,
     Object? pokemon1 = freezed,
     Object? pokemon2 = freezed,
@@ -150,6 +161,10 @@ class __$HomeScreenStateCopyWithImpl<$Res>
     Object? pokemon5 = freezed,
   }) {
     return _then(_HomeScreenState(
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
       pokemon: pokemon == freezed
           ? _value.pokemon
           : pokemon // ignore: cast_nullable_to_non_nullable
@@ -182,13 +197,17 @@ class __$HomeScreenStateCopyWithImpl<$Res>
 
 class _$_HomeScreenState implements _HomeScreenState {
   const _$_HomeScreenState(
-      {this.pokemon = 0,
+      {this.title = 'バトル中のポケモン',
+      this.pokemon = 0,
       this.pokemon1 = 0,
       this.pokemon2 = 0,
       this.pokemon3 = 0,
       this.pokemon4 = 0,
       this.pokemon5 = 0});
 
+  @JsonKey(defaultValue: 'バトル中のポケモン')
+  @override
+  final String title;
   @JsonKey(defaultValue: 0)
   @override
   final int pokemon;
@@ -210,13 +229,15 @@ class _$_HomeScreenState implements _HomeScreenState {
 
   @override
   String toString() {
-    return 'HomeScreenState(pokemon: $pokemon, pokemon1: $pokemon1, pokemon2: $pokemon2, pokemon3: $pokemon3, pokemon4: $pokemon4, pokemon5: $pokemon5)';
+    return 'HomeScreenState(title: $title, pokemon: $pokemon, pokemon1: $pokemon1, pokemon2: $pokemon2, pokemon3: $pokemon3, pokemon4: $pokemon4, pokemon5: $pokemon5)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _HomeScreenState &&
+            (identical(other.title, title) ||
+                const DeepCollectionEquality().equals(other.title, title)) &&
             (identical(other.pokemon, pokemon) ||
                 const DeepCollectionEquality()
                     .equals(other.pokemon, pokemon)) &&
@@ -240,6 +261,7 @@ class _$_HomeScreenState implements _HomeScreenState {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(title) ^
       const DeepCollectionEquality().hash(pokemon) ^
       const DeepCollectionEquality().hash(pokemon1) ^
       const DeepCollectionEquality().hash(pokemon2) ^
@@ -255,13 +277,16 @@ class _$_HomeScreenState implements _HomeScreenState {
 
 abstract class _HomeScreenState implements HomeScreenState {
   const factory _HomeScreenState(
-      {int pokemon,
+      {String title,
+      int pokemon,
       int pokemon1,
       int pokemon2,
       int pokemon3,
       int pokemon4,
       int pokemon5}) = _$_HomeScreenState;
 
+  @override
+  String get title => throw _privateConstructorUsedError;
   @override
   int get pokemon => throw _privateConstructorUsedError;
   @override
