@@ -1,4 +1,5 @@
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
+import 'package:pokemon_card_help_app/component/other_card_widget.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'home_screen_state.dart';
@@ -9,17 +10,24 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StateNotifierProvider<HomeScreenController, HomeScreenState>(
-      create: (context) => HomeScreenController(
-        context: context,
-      ),
+      create: (context) =>
+          HomeScreenController(
+            context: context,
+          ),
       builder: (context, _) {
         final mediaWidth = MediaQuery.of(context).size.width;
-        final pokemon = context.select<HomeScreenState, int>((state) => state.pokemon);
-        final pokemon1 = context.select<HomeScreenState, int>((state) => state.pokemon1);
-        final pokemon2 = context.select<HomeScreenState, int>((state) => state.pokemon2);
-        final pokemon3 = context.select<HomeScreenState, int>((state) => state.pokemon3);
-        final pokemon4 = context.select<HomeScreenState, int>((state) => state.pokemon4);
-        final pokemon5 = context.select<HomeScreenState, int>((state) => state.pokemon5);
+        final pokemon =
+        context.select<HomeScreenState, int>((state) => state.pokemon);
+        final pokemon1 =
+        context.select<HomeScreenState, int>((state) => state.pokemon1);
+        final pokemon2 =
+        context.select<HomeScreenState, int>((state) => state.pokemon2);
+        final pokemon3 =
+        context.select<HomeScreenState, int>((state) => state.pokemon3);
+        final pokemon4 =
+        context.select<HomeScreenState, int>((state) => state.pokemon4);
+        final pokemon5 =
+        context.select<HomeScreenState, int>((state) => state.pokemon5);
         return Scaffold(
           body: Center(
             child: Column(
@@ -74,7 +82,6 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     const Spacer(),
-                    //TODO 大カード
                     GestureDetector(
                       onTap: () =>
                           context.read<HomeScreenController>().pokemon(),
@@ -82,7 +89,15 @@ class HomeScreen extends StatelessWidget {
                         width: mediaWidth / 2,
                         height: mediaWidth / 1.5,
                         color: Colors.red,
-                        child: Text('$pokemon'),
+                        child: Center(
+                          child: Text(
+                            '$pokemon',
+                            style: const TextStyle(
+                              fontSize: 40,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
                       ),
                     ),
                     const Spacer(),
@@ -155,55 +170,30 @@ class HomeScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    GestureDetector(
-                      onTap: () =>
-                          context.read<HomeScreenController>().pokemon1(),
-                      child: Container(
-                        width: mediaWidth / 5.5,
-                        height: mediaWidth / 2.5,
-                        color: Colors.red,
-                        child: Text('$pokemon1'),
-                      ),
+                    OtherCardWidget(
+                      mediaWidth: mediaWidth,
+                      text: '$pokemon1',
+                      onTap: () => context.read<HomeScreenController>().pokemon1(),
                     ),
-                    GestureDetector(
-                      onTap: () =>
-                          context.read<HomeScreenController>().pokemon2(),
-                      child: Container(
-                        width: mediaWidth / 5.5,
-                        height: mediaWidth / 2.5,
-                        color: Colors.blue,
-                        child: Text('$pokemon2'),
-                      ),
+                    OtherCardWidget(
+                      mediaWidth: mediaWidth,
+                      text: '$pokemon2',
+                      onTap: () => context.read<HomeScreenController>().pokemon2(),
                     ),
-                    GestureDetector(
-                      onTap: () =>
-                          context.read<HomeScreenController>().pokemon3(),
-                      child: Container(
-                        width: mediaWidth / 5.5,
-                        height: mediaWidth / 2.5,
-                        color: Colors.yellow,
-                        child: Text('$pokemon3'),
-                      ),
+                    OtherCardWidget(
+                      mediaWidth: mediaWidth,
+                      text: '$pokemon3',
+                      onTap: () => context.read<HomeScreenController>().pokemon3(),
                     ),
-                    GestureDetector(
-                      onTap: () =>
-                          context.read<HomeScreenController>().pokemon4(),
-                      child: Container(
-                        width: mediaWidth / 5.5,
-                        height: mediaWidth / 2.5,
-                        color: Colors.green,
-                        child: Text('$pokemon4'),
-                      ),
+                    OtherCardWidget(
+                      mediaWidth: mediaWidth,
+                      text: '$pokemon4',
+                      onTap: () => context.read<HomeScreenController>().pokemon4(),
                     ),
-                    GestureDetector(
-                      onTap: () =>
-                          context.read<HomeScreenController>().pokemon5(),
-                      child: Container(
-                        width: mediaWidth / 5.5,
-                        height: mediaWidth / 2.5,
-                        color: Colors.pink,
-                        child: Text('$pokemon5'),
-                      ),
+                    OtherCardWidget(
+                      mediaWidth: mediaWidth,
+                      text : '$pokemon5',
+                      onTap: () => context.read<HomeScreenController>().pokemon5(),
                     ),
                   ],
                 ),
